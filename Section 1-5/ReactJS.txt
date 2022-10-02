@@ -1,0 +1,5 @@
+PARTE 1
+1. React.JS é uma biblioteca de Javascript que funciona client-side e tem como intenção criar interfaces reativas. 
+
+2.Javascript puro é muito imperativo, React é declarativo e mais modularizado. Manutenção e Reusabilidade ++
+

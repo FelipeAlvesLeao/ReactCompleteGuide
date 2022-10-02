@@ -1,0 +1,128 @@
+1. Variávels 
+let -> variáveis ; const -> constante 
+
+2. Arrow Functions -> alternativa para funções tradicionais, compacta.
+função: function myFnc() {body }
+arrow function: const myFnc = () => {body}, onde => é um comparativo
+A função das arrow functions é manter a consistência do keyword "this". Dentro delas, this SEMPRE se refere ao objeto que define a função (owner) enquanto em funções regulares 
+this se refer ao objeto que chama a função 
+
+
+	
+<script>
+    let checkNumber = (num) => num > 10 ?
+        console.log("Yes") : console.log("No");
+ 
+    checkNumber(5);
+    checkNumber(10);
+    checkNumber(20);
+    checkNumber(32);
+</script>
+
+
+
+	// Regular Function:
+	hello = function() {
+	  document.getElementById("demo").innerHTML += this;
+	}
+
+	// The window object calls the function:
+	window.addEventListener("load", hello);
+
+	// A button object calls the function:
+	document.getElementById("btn").addEventListener("click", hello); (retorna [object HTMLButtonElement])
+
+
+
+	// Arrow Function:
+	hello = () => {
+	  document.getElementById("demo").innerHTML += this;
+	}
+
+	// The window object calls the function:
+	window.addEventListener("load", hello);
+
+	// A button object calls the function:
+	document.getElementById("btn").addEventListener("click", hello); (retorna [object Window])
+	
+
+	let printMyName = (name, age) => {
+    console.log(name, age);
+}
+
+	const multiply = number => number*2;
+	
+	
+3. Exports and Imports
+
+export -> declaração que exporta valores de módulos JavaScript
+import ou dynamic import -> declaração que importa valores desejados.
+
+	// export an array
+	export let months = ['Jan', 'Feb', 'Mar','Apr', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+	// export a constant
+	export const MODULES_BECAME_STANDARD_YEAR = 2015;
+
+	// export a class
+	export class User {
+	  constructor(name) {
+		this.name = name;
+	  }
+	}
+
+Exemplo 2:
+//person.js
+
+const person = {
+	name: 'Max' 
+	}
+	
+export default person 
+(default significa que, se importar algo desse arquivo, o padrão será person).
+
+//utility.js 
+
+export const clean = () => {...}
+export const baseData = 10;
+
+//app.js
+
+import person from './person.js'
+import prs from './person.js' -> como default é usado em person.js, o nome NÃO importa 
+
+import {baseData, clean} from './utility.js' -> precisa das chaves pois não há default, então precisamos definir o nome exatamente
+
+Para importar tudo exportado em um arquivo _>
+import * as Nome from './filename.js'
+
+
+CLASSES SINTAXE 
+class X { 
+  myProperty = 'value'
+  myMethod() { }
+  get myGet() { return this.myProperty; }
+  myM
+
+}
+
+
+
+
+SPREAD AND REST OPERATOR (...)
+
+
+Spread -> split up array elements OR object properties
+const newArray = [...oldArray, 1, 2]
+const newObject = {...oldObject, newProp: 5}
+
+Rest -> USed to merge a list of function arguments into an array
+
+function sortArgs(...args) { return args.sort() }
+
+
+
+ARRAY FUNCTIONS
+
+
+

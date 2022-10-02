@@ -1,0 +1,7 @@
+
+HOW IS A COMPONENT BUILT?
+
+Even though components can use HTML, CSS and JavaScript code, the focus of react is mixing HTML and JavaScript.
+Components are supposed to be
+1. Re-usable
+2. Reactive
