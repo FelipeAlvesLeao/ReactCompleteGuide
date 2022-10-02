@@ -36,7 +36,7 @@ function ExpenseForm(props) {
     event.preventDefault(); //javascript method that prevents page from reloading when you call the form
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount,
       date: new Date(enteredDate),
     };
 
